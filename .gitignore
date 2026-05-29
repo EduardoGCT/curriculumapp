@@ -1,0 +1,74 @@
+# ==========================================
+# BACKEND: C# / .NET
+# ==========================================
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Arquivos de configuração do usuário (VS Code, Visual Studio)
+.suo
+.user
+.userosscache
+.sln.docstates
+*.DotSettings.user
+.vs/
+.vscode/
+
+# Arquivos de pacotes NuGet
+packages/
+*/packages/
+*.nupkg
+
+# ==========================================
+# FRONTEND: React / Node.js
+# ==========================================
+# Dependências
+/node_modules/
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+/pnpm-debug.log*
+.pnpm-store/
+
+# Builds e arquivos gerados
+/dist/
+/build/
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==========================================
+# GERAIS: Sistema Operacional e Outros
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs e Cobertura de Testes
+*.log
+*.seed
+*.pid
+*.seed.pid
+*.lcov
+coverage/

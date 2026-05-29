@@ -1,0 +1,6 @@
+@curriculumApi_HostAddress = http://localhost:5195
+
+GET {{curriculumApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
