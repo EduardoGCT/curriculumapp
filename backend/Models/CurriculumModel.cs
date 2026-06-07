@@ -1,19 +1,28 @@
 namespace curriculumApi.Models;
 
-public class CurriculumModel (string name)
+public class CurriculumModel
 {
+    public Guid Id { get; set; } = Guid.NewGuid();
     
+    // Mudamos de 'private set' para 'set' (ou 'init') para o JSON conseguir preencher
+    public string Name { get; set; } = string.Empty;
 
-    public Guid Id { get; init; } = Guid.NewGuid();
-    public string Name { get; private set; } = name;
+    public PersonalInfo PersonalInfo { get; set; } = new();
+    public List<Education> Educations { get; set; } = new();
+    public List<Experience> Experiences { get; set; } = new();
+    public List<Skill> Skills { get; set; } = new();
 
-    public void ChangeName(string name)
+    // 1. CONSTRUTOR VAZIO: Obrigatório para o EF Core e para o Serializador JSON
+    public CurriculumModel()
+    {
+    }
+
+    // 2. Seu construtor atual pode continuar aqui sem problemas
+    public CurriculumModel(string name)
     {
         Name = name;
     }
 
-    public void SetInactive()
-    {
-        Name = "desativado";
-    }
+    public void ChangeName(string name) => Name = name;
+    public void SetInactive() => Name = "desativado";
 }
